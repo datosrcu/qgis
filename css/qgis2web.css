@@ -214,55 +214,55 @@ html, body {
   display: none;
 }
 
-/* ====== HEADER FIJO ====== */
-.header-secretaria{
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-
-  height: 80px;
-  background-color: #2CB4E8;
-  z-index: 9999;
-
-  display: flex;
-  align-items: center;
-}
-
-/* izquierda */
-.header-left{
-  display: flex;
-  align-items: center;
-  padding-left: 18px;
-  gap: 10px;
-}
-
-.logo-datos{
-  height: 52px;         /* más grande */
-  width: auto;
-  max-width: 320px;     /* evita que explote */
-  object-fit: contain;
-}
-
-.datos-text{
-  font: 700 34px/1 Arial, Helvetica, sans-serif;
-  color: #ffffff;
-}
-
-/* centro real */
-.header-center{
+/* ====== TÍTULO CENTRADO (ABSOLUTO REAL) ====== */
+.header-title{
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+  text-align: center;
+  color: #ffffff;
+
+  /* para que no se “monte” sobre logos en pantallas angostas */
+  max-width: 55vw;
+  padding: 0 10px;
+  pointer-events: none; /* no molesta al mapa */
 }
 
-.logo-secretaria-centro{
-  height: 80px;        /* más grande */
+.title-line-1{
+  font: 700 18px/1.15 Arial, Helvetica, sans-serif;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.title-line-2{
+  font: 500 14px/1.15 Arial, Helvetica, sans-serif;
+  opacity: 0.95;
+  margin-top: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ====== LOGO A LA DERECHA ====== */
+.header-right{
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 0 0 auto;
+}
+
+.logo-secretaria-derecha{
+  height: 80px;     /* ajustable: 56–70 */
   width: auto;
-  max-width: 520px;
+  max-width: 420px;
   object-fit: contain;
 }
 
+/* Baja controles Leaflet para que no queden debajo del header */
+.leaflet-top{
+  top: 90px !important;
+}
