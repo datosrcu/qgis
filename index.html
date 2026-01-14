@@ -16,19 +16,32 @@
     </head>
     <body>
         <header class="header-secretaria">
-        <div class="header-left">
-         <!-- Si la imagen no carga, se muestra el texto -->
-            <img src="assets/logo-datosrcu-blanco.png" alt="@DATOSRCU" class="logo-datos"
-                onerror="this.style.display='none'; document.getElementById('datos-text').style.display='block';" />
-            <span id="datos-text" class="datos-text" style="display:none;">@DATOSRCU</span>
-        </div>
+  <div class="header-left">
+    <!-- Si la imagen no carga, se muestra el texto -->
+    <img
+      src="assets/logo-datosrcu-blanco.png"
+      alt="@DATOSRCU"
+      class="logo-datos"
+      onerror="this.style.display='none'; document.getElementById('datos-text').style.display='block';"
+    />
+    <span id="datos-text" class="datos-text" style="display:none;">@DATOSRCU</span>
+  </div>
 
-        <div class="header-center">
-            <img src="assets/logo-secretaria-celeste.png"
-                alt="Secretaría de Gestión y Participación Ciudadana"
-                class="logo-secretaria-centro" />
-        </div>
-        </header>
+  <!-- TÍTULO CENTRADO -->
+  <div class="header-title" aria-label="Título del mapa">
+    <div class="title-line-1">Necesidades Básicas Insatisfechas (NBI) — Río Cuarto</div>
+    <div class="title-line-2">Distribución por radio censal (Censo 2022)</div>
+  </div>
+
+  <!-- LOGO DERECHA -->
+  <div class="header-right">
+    <img
+      src="assets/logo-secretaria-celeste.png"
+      alt="Secretaría de Gestión y Participación Ciudadana"
+      class="logo-secretaria-derecha"
+    />
+  </div>
+</header>
         <div id="map">
         </div>
         <script src="js/qgis2web_expressions.js"></script>
